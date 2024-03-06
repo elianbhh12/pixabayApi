@@ -8,47 +8,48 @@
     <title>Buscador de Imagenes</title>
 </head>
 
-<body>
-  
+<body >
+  <!-- Creacte By Joker Banny -->
+<div class="  flex justify-center items-center">
+	<div class="container mx-auto bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 rounded-lg p-14">
+		<form id="formulario">
+			<h1 class="text-center font-bold text-white text-4xl">Buscardor de Imagenes Pixabay</label>
+				<p class="mx-auto font-normal text-sm my-6 max-w-lg">Nuestro banco de imágenes tiene más de 1 millón de imágenes y videos compartidos por nuestra talentosa comunidad</p>
+				<div class="sm:flex items-center bg-white rounded-lg overflow-hidden px-2 py-1 justify-between">
+					<input class="text-base text-gray-400 flex-grow outline-none px-2 " id="termino" name="termino" placeholder="Buscardor de imagenes de pixabay" type="text"  />
+					<div class="ms:flex items-center px-2 rounded-lg space-x-4 mx-auto ">
+						<select id="categoria" class="text-base text-gray-800 outline-none border-2 px-4 py-2 rounded-lg">
+                            <option value="">Todas las categorías</option>
+                            <option value="arquitectura">Arquitectura</option>
+                            <option value="animales">Animales</option>
+                            <option value="naturaleza">Naturaleza</option>
+                            <option value="tecnología">Tecnología</option>
+                            <option value="deportes">Deportes</option>
+                            <option value="comida">Comida</option>
+                            <option value="viajes">Viajes</option>
+                            <option value="personas">Personas</option>
+          </select>
+						<button class="bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br text-white text-base rounded-lg px-4 py-2 font-thin font-bold">Buscar</button>
+					</div>
+				</div>
+		</form>
+	</div>
+</div>
     <div class="container mx-auto">
-        <div class="mb-8 text-center py-8">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-3">
-                Buscardor de Imagenes Pixabay
-            </h2>
-            <p class="text-lg lg:text-xl opacity-80">
-                Nuestro banco de imágenes tiene más de 1 millón de imágenes y videos compartidos por nuestra talentosa comunidad
-            </p>
-        </div>
-        <div class="relative">
-            <form id="formulario" class="flex flex-col gap-4">
-                <div class="flex flex-col gap-2">
-                    <label for="termino" class="font-bold ">Buscar Imagenes:</label>
-                    <input type="text" id="termino" name="termino" placeholder="Buscar todas las imagenes de pixabay" class="p-4 pl-10 text-gray-600 rounded border border-gray-300">
-                </div>
-                <div class="flex flex-col gap-2">
-                    <label for="categoria" class="font-bold">Categoría:</label>
-                    <select id="categoria" name="categoria" class="border border-gray-300 rounded-md p-2">
-                        <option value="">Todas las categorías</option>
-                        <option value="arquitectura">Arquitectura</option>
-                        <option value="animales">Animales</option>
-                        <option value="naturaleza">Naturaleza</option>
-                        <option value="tecnología">Tecnología</option>
-                        <option value="deportes">Deportes</option>
-                        <option value="comida">Comida</option>
-                        <option value="viajes">Viajes</option>
-                        <option value="personas">Personas</option>
-                    </select>
-                </div>
-                <button type="submit" class="bg-blue-500 text-white rounded-md p-2 hover:bg-blue-600">Buscar</button>
-            </form>
-        </div>
+
+
         <div id="resultados" class="grid grid-cols-5 gap-4 mt-4"></div>
     </div>
-
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="img01">
+            <div id="caption" class="info text-center"></div>
+        </div>
+    </div>
 
 
     <script src="app.js" ></script>
 </body>
     
         
-</html>
